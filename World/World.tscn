@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c0o5k8yckge81"]
+
+[sub_resource type="VoxelGeneratorFlat" id="VoxelGeneratorFlat_85nsh"]
+
+[sub_resource type="VoxelMesherBlocky" id="VoxelMesherBlocky_folwd"]
+
+[node name="World" type="Node3D"]
+
+[node name="VoxelTerrain" type="VoxelTerrain" parent="."]
+generator = SubResource("VoxelGeneratorFlat_85nsh")
+mesher = SubResource("VoxelMesherBlocky_folwd")

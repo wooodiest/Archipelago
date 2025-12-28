@@ -13,7 +13,11 @@ config_version=5
 config/name="Archipelago"
 run/main_scene="uid://b8cuj1a78djjq"
 config/features=PackedStringArray("4.5", "C#", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://_Assets/Textures/icon.svg"
+
+[audio]
+
+buses/default_bus_layout="res://_Assets/Audio/default_bus_layout.tres"
 
 [autoload]
 
@@ -24,6 +28,12 @@ BeehaveGlobalDebugger="*res://addons/beehave/debug/global_debugger.gd"
 
 settings/addon_root_folder="res://addons/debug_draw_3d"
 
+[display]
+
+window/size/viewport_width=1920
+window/size/viewport_height=1080
+window/stretch/mode="canvas_items"
+
 [dotnet]
 
 project/assembly_name="Archipelago"
@@ -32,6 +42,18 @@ project/assembly_name="Archipelago"
 
 enabled=PackedStringArray("res://addons/beehave/plugin.cfg")
 
+[layer_names]
+
+3d_physics/layer_1="Terrain"
+3d_physics/layer_2="Player"
+3d_physics/layer_3="Props"
+3d_physics/layer_4="Water"
+3d_physics/layer_5="Interaction"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+anti_aliasing/quality/msaa_3d=2
