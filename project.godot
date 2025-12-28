@@ -11,9 +11,27 @@ config_version=5
 [application]
 
 config/name="Archipelago"
-config/features=PackedStringArray("4.5", "Forward Plus")
+run/main_scene="uid://b8cuj1a78djjq"
+config/features=PackedStringArray("4.5", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+BeehaveGlobalMetrics="*res://addons/beehave/metrics/beehave_global_metrics.gd"
+BeehaveGlobalDebugger="*res://addons/beehave/debug/global_debugger.gd"
+
+[debug_draw_3d]
+
+settings/addon_root_folder="res://addons/debug_draw_3d"
 
 [dotnet]
 
 project/assembly_name="Archipelago"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/beehave/plugin.cfg")
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
